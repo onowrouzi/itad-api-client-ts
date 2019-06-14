@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosError } from "axios";
+import axios, { AxiosInstance } from "axios";
 
 import {
   ItadShop,
@@ -236,7 +236,6 @@ export class IsThereAnyDealApi {
               }`
             )
           : err;
-      console.log(error);
       throw error;
     }
   }
