@@ -1,6 +1,6 @@
 {
   "name": "itad-api-client-ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A typescript api client/library for the IsThereAnyDeal api.",
   "author": "onowrouzi",
   "license": "ISC",
@@ -52,7 +52,8 @@
     ]
   },
   "dependencies": {
-    "dotenv": "^8.0.0"
+    "dotenv": "^8.0.0",
+    "node-fetch": "^2.6.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.13",
@@ -60,7 +61,6 @@
     "@types/node-fetch": "^2.3.6",
     "@types/typescript": "^2.0.0",
     "jest": "^24.8.0",
-    "node-fetch": "^2.6.0",
     "ts-jest": "^24.0.2",
     "typescript": "^3.4.5"
   }
