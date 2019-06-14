@@ -17,7 +17,7 @@ import {
   ItadCurrentPrices
 } from "./types";
 
-export default class IsThereAnyDealApi {
+export class IsThereAnyDealApi {
   private readonly BASE_URL = "https://api.isthereanydeal.com";
   private readonly defaultHeaders = {
     "Content-Type": "application/json;charset=UTF-8"

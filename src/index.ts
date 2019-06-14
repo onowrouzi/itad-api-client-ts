@@ -1,2 +1,2 @@
 export * from "./types";
-export * from "./itad-client";
+export { IsThereAnyDealApi } from "./itad-client";

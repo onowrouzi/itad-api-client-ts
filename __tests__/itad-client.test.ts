@@ -1,4 +1,4 @@
-import IsThereAnyDealApi from "./../src/itad-client";
+import { IsThereAnyDealApi } from "./../src/itad-client";
 import { ItadDeal } from "../src/types";
 
 require("dotenv").config();
@@ -53,7 +53,7 @@ describe("ITAD Client Tests", () => {
     });
   });
 
-  it("ITAD Client - searchDealsFull", async () => {
+  it("ITAD Client - getDealsFull (with title query)", async () => {
     const res = await client.getDealsFull(
       {
         shops: [testShop]
