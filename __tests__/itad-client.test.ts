@@ -6,8 +6,6 @@ require("dotenv").config();
 jest.setTimeout(30000);
 
 describe("ITAD Client Tests", () => {
-  process.env = Object.assign(process.env, { ENV: "test" });
-
   const client = new IsThereAnyDealApi(process.env.API_KEY);
 
   const testPlain = "fallout-iii";
