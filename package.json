@@ -1,0 +1,67 @@
+{
+  "name": "itad-api-client-ts",
+  "version": "1.0.0",
+  "description": "A typescript api client/library for the IsThereAnyDeal api.",
+  "author": "onowrouzi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onowrouzi/itad-api-client-ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onowrouzi/itad-api-client-ts.git"
+  },
+  "homepage": "https://github.com/onowrouzi/itad-api-client-ts#readme",
+  "keywords": [
+    "api",
+    "game deals",
+    "is there any deal",
+    "typescript"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "start": "tsc && node .",
+    "build": "tsc",
+    "test": "tsc && jest --env=node",
+    "prepublishOnly": "tsc -p ./ --outDir dist/"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "coverageReporters": [
+      "html",
+      "json"
+    ]
+  },
+  "dependencies": {
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "@types/node": "^12.0.2",
+    "@types/node-fetch": "^2.3.6",
+    "@types/typescript": "^2.0.0",
+    "jest": "^24.8.0",
+    "node-fetch": "^2.6.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5"
+  }
+}
