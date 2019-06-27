@@ -14,7 +14,8 @@ import {
   ItadDealsFull,
   ItadDealFull,
   ItadGamePriceSearchParams,
-  ItadCurrentPrices
+  ItadCurrentPrices,
+  ItadExternalIdPlains
 } from "./types";
 
 export class IsThereAnyDealApi {
@@ -80,6 +81,26 @@ export class IsThereAnyDealApi {
 
     const shopsParam = `shops=${shops ? shops.join(",") : ""}`;
     const url = `/v01/game/plain/list/?key=${this.key}&${shopsParam}`;
+
+    return await this.request(url);
+  }
+
+  async getPlainsByExternalId(
+    ids: string[],
+    shop: string
+  ): Promise<ItadExternalIdPlains> {
+    if (!ids || ids.length === 0) {
+      throw new Error(
+        "Must provide at least one external id. Ex: ['app/12345']."
+      );
+    }
+
+    if (!shop) {
+      throw new Error("Must provide a shop. Ex: 'steam'");
+    }
+
+    const idsParam = `ids=${ids ? ids.join(",") : ""}`;
+    const url = `/v01/game/plain/id/?key=${this.key}&shop=${shop}&${idsParam}`;
 
     return await this.request(url);
   }

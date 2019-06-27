@@ -229,4 +229,23 @@ describe("ITAD Client Tests", () => {
       })
     ).rejects.toThrowError();
   });
+
+  it("ITAD Client - getPlainsByExternalId", async () => {
+    const ids = ["app/3830", "app/6910", "app/6920", "app/6980"];
+    const res = await client.getPlainsByExternalId(ids, "steam");
+
+    expect(res).not.toBeUndefined();
+    Object.keys(res).forEach(d => expect(ids.includes(d)).toBeTruthy());
+  });
+
+  it("ITAD Client - getPlainsByExternalId (without ids) - Error", async () => {
+    await expect(
+      client.getPlainsByExternalId([], "steam")
+    ).rejects.toThrowError();
+  });
+
+  it("ITAD Client - getPlainsByExternalId (without shop) - Error", async () => {
+    const ids = ["app/3830", "app/6910", "app/6920", "app/6980"];
+    await expect(client.getPlainsByExternalId(ids, "")).rejects.toThrowError();
+  });
 });

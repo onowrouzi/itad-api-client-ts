@@ -1,6 +1,6 @@
 {
   "name": "itad-api-client-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A typescript api client/library for the IsThereAnyDeal api.",
   "author": "onowrouzi",
   "license": "ISC",

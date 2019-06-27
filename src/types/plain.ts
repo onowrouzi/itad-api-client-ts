@@ -7,3 +7,7 @@ export type ItadShopPlains = {
     [id: string]: string;
   };
 };
+
+export type ItadExternalIdPlains = {
+  [external_id: string]: string;
+};
