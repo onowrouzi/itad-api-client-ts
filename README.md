@@ -60,3 +60,7 @@ getHistoricalLow: /v01/game/lowest/?key=&plains=&region=&country=&shops=&exclude
 getDeals: /v01/deals/list/?key=&shops=&offset=&limit=&region=&country=
 searchDeals: /v01/search/search/?key=&q=&shops=&offset=&limit=&region=&country=
 ```
+
+## Running Tests
+
+Download the code and run the following command in your terminal: API_KEY=\<API Key Goes Here\> npm t
